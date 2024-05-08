@@ -20,6 +20,7 @@ def from_json(jsoned_obj: str) -> list | tuple | dict:
     unjsoned_obj = json.loads(jsoned_obj)
     return unjsoned_obj
 
+
 # & Converts string date "23.05.11" or "23/05/11" to datetime
 def str_to_date(date_str: str) -> int:
     split_char = '.' if ('.' in date_str) else ('/' if ('/' in date_str) else ('-' if ('-' in date_str) else ''))
@@ -28,6 +29,7 @@ def str_to_date(date_str: str) -> int:
     date = (int(ymd) for ymd in date_str.split(split_char))
     date = datetime(*date)
     return date
+
 
 # & Converts int date to str
 def int_to_str(date_int: int) -> datetime:
@@ -40,6 +42,7 @@ def int_to_str(date_int: int) -> datetime:
     ymd.reverse()
     date = '-'.join(ymd)
     return date
+
 
 # & Converts int date to datetime
 def int_to_date(date_int: int) -> datetime:
@@ -298,6 +301,7 @@ def main():
         print("\n\n")
 
     db.close()
+
 
 if __name__ == "__main__":
     main()
