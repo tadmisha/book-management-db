@@ -9,6 +9,10 @@ status_int_to_str = { 0: "Unread",
                       2: "Reading",
                       3: "Going to read" }
 
+# ~* Text that's sent when /help function is executed 
+help_text = "/help - Information about other functions\n/end - Stops program\n/add - Add new book into the database\n/rate - Rate a book you want\n/status - Update status of the book\n\t1 - Unread\n\t2 - Read\n\t3 - Reading\n\t4 - Going to read\n/getinfo - Get all the information about a book"
+
+
 # & Converts list/tuple/dict etc to JSON
 def to_json(to_json_obj: list | tuple | dict) -> str:
     jsoned_obj = json.dumps(to_json_obj)
@@ -236,7 +240,7 @@ def main():
         print("\n")
         # ? Help function, writes info about other functions
         if (func == "/help"):
-            print("/help - Information about other functions\n/end - Stops program\n/add - Add new book into the database\n/rate - Rate a book you want\n/status - Update status of the book\n\t1 - Unread\n\t2 - Read\n\t3 - Reading\n\t4 - Going to read\n/getinfo - Get all the information about a book")            
+            print(help_text)            
 
         # ? End function, ends program
         elif (func == "/end"):
