@@ -32,7 +32,7 @@ def str_to_date(date_str: str) -> int:
 
 
 # & Converts int date to str
-def int_to_str(date_int: int) -> datetime:
+def int_to_str(date_int: int) -> str:
     ymd = []
     for _ in range(3):
         str_ymd = str(date_int%100)
